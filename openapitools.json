@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.11.0",
+    "generators": {
+      "v1.0": { 
+        "generatorName": "typescript-angular",
+        "output": "#{cwd}/src/app/api/v1.0/#{name}",
+        "glob": "api/v1.0/*.{json,yaml}",
+        "additionalProperties": {
+          "ngVersion": "19.1.1",
+          "npmName": "restClient",
+          "supportsES6": "true",
+          "npmVersion": "10.9.2",
+          "withInterfaces": true
+        }
+      }
+    }
+  }
+}
