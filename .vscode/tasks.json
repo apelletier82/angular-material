@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run-brave-dev",
+            "type": "shell",
+            "linux": {
+                "command": "flatpak",
+                "args": ["run" ,"com.brave.Browser", "--remote-debugging-port=9222"],
+            },
+            "problemMatcher": [],
+        },
+    ]
+}
