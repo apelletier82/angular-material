@@ -1,0 +1,11 @@
+<ng-template #templateRefProvider let-formCtrlName>
+  <h3>TemplateRef Provider</h3>
+  <p>This component demonstrates the use of TemplateRef in Angular.</p>
+  <p>TemplateRef allows you to reference a block of HTML and reuse it in different parts of your application.</p>
+  <p>It is often used in conjunction with ViewContainerRef to dynamically insert templates into the DOM.</p>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>{{formCtrlName}}</mat-label>
+    <input type="text" [formControlName]="formCtrlName" placeholder="Enter some text" />
+  </mat-form-field>
+</ng-template>
