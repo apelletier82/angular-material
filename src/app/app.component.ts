@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet, Routes} from '@angular/router';
 import {MatToolbar} from '@angular/material/toolbar';
-import {MatTabLink, MatTabNav} from '@angular/material/tabs';
+import {MatTabLink, MatTabNav, MatTabNavPanel} from '@angular/material/tabs';
 import {Observable, of} from 'rxjs';
 import {routes} from './app.routes';
 import {AsyncPipe} from '@angular/common';
@@ -21,6 +21,7 @@ import {MatIcon} from '@angular/material/icon';
     AsyncPipe,
     MatButton,
     MatIcon,
+    MatTabNavPanel,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

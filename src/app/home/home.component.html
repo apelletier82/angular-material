@@ -1,6 +1,11 @@
-<p>home works!</p>
-
-<div>
-  <p>Test for TemplateRef</p>
-  <app-host-consumer></app-host-consumer>
-</div>
+<h2>Test of list with scrollbar</h2>
+<mat-list class="small-list">
+  @for (item of items; track item) {
+    <mat-list-item>
+      <button mat-stroked-button>{{ item }}</button>
+    </mat-list-item>
+  }
+</mat-list>
+<mat-divider></mat-divider>
+<h2>Test for templateRef unknown between provider and consumer</h2>
+<app-host-consumer></app-host-consumer>

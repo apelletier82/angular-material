@@ -1,6 +1,6 @@
 <mat-toolbar>
   <button mat-button routerLink="/"><h1>My App</h1></button>
-  <nav mat-tab-nav-bar>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
     @for (link of getNavigationLinks$() | async; track link.path) {
       <a
         mat-tab-link
@@ -17,4 +17,8 @@
     }
   </nav>
 </mat-toolbar>
-<router-outlet></router-outlet>
+<div class="nav-router-outlet">
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+</div>

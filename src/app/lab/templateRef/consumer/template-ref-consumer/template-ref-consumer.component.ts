@@ -1,11 +1,10 @@
 import {Component, Input, TemplateRef} from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {NgTemplateOutlet} from '@angular/common';
-import {MatDivider} from '@angular/material/divider';
 
 @Component({
   selector: 'app-template-ref-consumer',
-  imports: [NgTemplateOutlet, ReactiveFormsModule, MatDivider],
+  imports: [NgTemplateOutlet, ReactiveFormsModule],
   templateUrl: './template-ref-consumer.component.html',
   styleUrl: './template-ref-consumer.component.scss',
 })
@@ -22,6 +21,9 @@ export class TemplateRefConsumerComponent {
   }
 
   formGroup!: FormGroup;
+  get formControlEmail(): FormControl {
+    return this.formGroup.get('email') as FormControl;
+  }
 
   constructor(private readonly formBuilder: FormBuilder) {
     this.setFormGroup();

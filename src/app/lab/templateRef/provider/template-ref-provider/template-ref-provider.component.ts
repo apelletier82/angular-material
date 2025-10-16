@@ -1,10 +1,11 @@
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
-import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatFormField} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
 
 @Component({
   selector: 'app-template-ref-provider',
-  imports: [ReactiveFormsModule, MatFormField, MatLabel],
+  imports: [ReactiveFormsModule, MatFormField, MatInput],
   templateUrl: './template-ref-provider.component.html',
   styleUrl: './template-ref-provider.component.scss',
 })
