@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HostConsumerComponent } from './host-consumer.component';
+import {HostConsumerComponent} from './host-consumer.component';
 
 describe('HostConsumerComponent', () => {
   let component: HostConsumerComponent;
@@ -8,9 +8,8 @@ describe('HostConsumerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HostConsumerComponent]
-    })
-    .compileComponents();
+      imports: [HostConsumerComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HostConsumerComponent);
     component = fixture.componentInstance;

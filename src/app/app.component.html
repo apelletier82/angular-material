@@ -1,17 +1,19 @@
 <mat-toolbar>
-
   <button mat-button routerLink="/"><h1>My App</h1></button>
   <nav mat-tab-nav-bar>
-    @for (link of getNavigationLinks$() | async ; track link.path) {
-    <a mat-tab-link
-       [routerLink]="link.path"
-       routerLinkActive #rla="routerLinkActive"
-       [active]="rla.isActive">
-      <div class="tab-header-label">
-        <mat-icon>{{link.data?.['icon']}}</mat-icon>
-        <p>{{link.title}}</p>
-      </div>
-    </a>
+    @for (link of getNavigationLinks$() | async; track link.path) {
+      <a
+        mat-tab-link
+        [routerLink]="link.path"
+        routerLinkActive
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
+      >
+        <div class="tab-header-label">
+          <mat-icon>{{ link.data?.['icon'] }}</mat-icon>
+          <p>{{ link.title }}</p>
+        </div>
+      </a>
     }
   </nav>
 </mat-toolbar>

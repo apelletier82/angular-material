@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { HostConsumerComponent } from '../lab/templateRef/host-consumer/host-consumer.component';
+import {Component} from '@angular/core';
+import {HostConsumerComponent} from '../lab/templateRef/host-consumer/host-consumer.component';
 
 @Component({
   selector: 'app-home',

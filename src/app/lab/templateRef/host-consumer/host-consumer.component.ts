@@ -1,6 +1,6 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { TemplateRefConsumerComponent } from '../consumer/template-ref-consumer/template-ref-consumer.component';
-import { TemplateRefProviderComponent } from '../provider/template-ref-provider/template-ref-provider.component';
+import {Component, TemplateRef, ViewChild} from '@angular/core';
+import {TemplateRefConsumerComponent} from '../consumer/template-ref-consumer/template-ref-consumer.component';
+import {TemplateRefProviderComponent} from '../provider/template-ref-provider/template-ref-provider.component';
 
 @Component({
   selector: 'app-host-consumer',
@@ -9,10 +9,10 @@ import { TemplateRefProviderComponent } from '../provider/template-ref-provider/
   styleUrl: './host-consumer.component.scss',
 })
 export class HostConsumerComponent {
-  @ViewChild(TemplateRefProviderComponent, { static: true })
+  @ViewChild(TemplateRefProviderComponent, {static: true})
   templateRefProviderComponent!: TemplateRefProviderComponent;
 
-  get templateRefProvider(): TemplateRef<any> {
+  get templateRefProvider(): TemplateRef<never> {
     return this.templateRefProviderComponent!.templateRefProvider;
   }
 }

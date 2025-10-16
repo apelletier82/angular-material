@@ -46,6 +46,9 @@ testem.log
 Thumbs.db
 .directory
 
-# angular   
+# angular
 .angular
+
+# npm
+package-lock.json
 

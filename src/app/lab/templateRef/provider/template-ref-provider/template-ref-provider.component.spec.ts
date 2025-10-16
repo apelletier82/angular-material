@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TemplateRefProviderComponent } from './template-ref-provider.component';
+import {TemplateRefProviderComponent} from './template-ref-provider.component';
 
 describe('TemplateRefProviderComponent', () => {
   let component: TemplateRefProviderComponent;
@@ -8,9 +8,8 @@ describe('TemplateRefProviderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TemplateRefProviderComponent]
-    })
-    .compileComponents();
+      imports: [TemplateRefProviderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TemplateRefProviderComponent);
     component = fixture.componentInstance;

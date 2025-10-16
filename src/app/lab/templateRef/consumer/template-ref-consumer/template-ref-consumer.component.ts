@@ -1,7 +1,7 @@
-import { Component, Input, TemplateRef } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { NgTemplateOutlet } from '@angular/common';
-import { MatDivider } from '@angular/material/divider';
+import {Component, Input, TemplateRef} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {NgTemplateOutlet} from '@angular/common';
+import {MatDivider} from '@angular/material/divider';
 
 @Component({
   selector: 'app-template-ref-consumer',
@@ -10,14 +10,14 @@ import { MatDivider } from '@angular/material/divider';
   styleUrl: './template-ref-consumer.component.scss',
 })
 export class TemplateRefConsumerComponent {
-  private _templateRefProvider!: TemplateRef<any>;
+  private _templateRefProvider!: TemplateRef<never>;
 
-  get templateRefProvider(): TemplateRef<any> {
+  get templateRefProvider(): TemplateRef<never> {
     return this._templateRefProvider;
   }
 
   @Input()
-  set templateRefProvider(templateRef: TemplateRef<any>) {
+  set templateRefProvider(templateRef: TemplateRef<never>) {
     this._templateRefProvider = templateRef;
   }
 
