@@ -16,6 +16,18 @@
       </a>
     }
   </nav>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="themeToggleMenu">
+    <mat-icon>format_color_fill</mat-icon>
+  </button>
+  <mat-menu #themeToggleMenu="matMenu">
+    <button mat-menu-item (click)="setTheme('light')">
+      <span><mat-icon>light_mode</mat-icon> Light </span>
+    </button>
+    <button mat-menu-item (click)="setTheme('dark')">
+      <span><mat-icon>dark_mode</mat-icon> Dark</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>
 <div class="nav-router-outlet">
   <mat-tab-nav-panel #tabPanel>

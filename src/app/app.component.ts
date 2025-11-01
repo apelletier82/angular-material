@@ -5,8 +5,10 @@ import {MatTabLink, MatTabNav, MatTabNavPanel} from '@angular/material/tabs';
 import {Observable, of} from 'rxjs';
 import {routes} from './app.routes';
 import {AsyncPipe} from '@angular/common';
-import {MatButton} from '@angular/material/button';
+import {MatButton, MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
+import {MatSlideToggle} from '@angular/material/slide-toggle';
+import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +24,10 @@ import {MatIcon} from '@angular/material/icon';
     MatButton,
     MatIcon,
     MatTabNavPanel,
+    MatIconButton,
+    MatMenu,
+    MatMenuTrigger,
+    MatMenuItem,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -33,5 +39,9 @@ export class AppComponent {
         .filter((route) => route && route.data && !!route.data?.['displayInMenu'])
         .sort((a, b) => a.data?.['displayOrder'] - b.data?.['displayOrder'])
     );
+  }
+
+  setTheme(theme: 'light' | 'dark'): void {
+    document.body.className = `${theme}-mode`;
   }
 }
